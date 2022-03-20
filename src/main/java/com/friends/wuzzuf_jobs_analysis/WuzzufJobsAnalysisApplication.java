@@ -19,8 +19,8 @@ public class WuzzufJobsAnalysisApplication {
 		JobDAO jobDAO = new JobDAO(result);
 		
 		jobDAO.head();
-		jobDAO.removeDuplicates();
-		
+		jobDAO.cleanData();
+		jobDAO.printMostCompaniesJobs();
 	}
 
 }

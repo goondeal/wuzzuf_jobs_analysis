@@ -16,6 +16,7 @@ public class DataReader {
 		sparkSession = SparkSession.builder()
         		.appName("Wuzzuf Jobs Analysis")
                 .master("local[2]").getOrCreate();
+		sparkSession.sparkContext().setLogLevel("ERROR");
 		dfr = sparkSession.read().option("header", true);
 	}
 	
@@ -25,6 +26,11 @@ public class DataReader {
 		}
 		return instance;
 	}
+	
+	public SparkSession getSparkSession() {
+		return sparkSession;
+	}
+
 	
 	public Dataset<Row> readCSV(String path) {
         final Dataset<Row> df = dfr.csv(path);

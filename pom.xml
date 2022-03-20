@@ -1,4 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+	
+	<!--<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.4</version>
+		<relativePath/> 
+	</parent> --> 
+	 
+    <groupId>com.friends</groupId>
+	<artifactId>wuzzuf_jobs_analysis</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>wuzzuf_jobs_analysis</name>
+	<description>Project to analyse wuzzuf jobs</description>
+	
+	<dependencies>
+		
+		<!-- <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+ -->		
+	    <dependency>
+	        <groupId>org.apache.spark</groupId>
+	        <artifactId>spark-core_2.11</artifactId>
+	        <version>2.1.0</version>
+		    <!-- <exclusions>
+	            <exclusion>
+	                <groupId>io.netty</groupId>
+	                <artifactId>netty-all</artifactId>
+	            </exclusion>
+	        </exclusions> -->
+        </dependency>
+
+		<!-- <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.17.Final</version>
+        </dependency>
+	     -->
+	    <dependency>
+	        <groupId>org.apache.spark</groupId>
+	        <artifactId>spark-mllib_2.11</artifactId>
+	        <version>2.1.0</version>
+	    </dependency>
+	</dependencies>
+    
+    <properties>
+    	<java.version>11</java.version>
+        <maven.compiler.source>10</maven.compiler.source>
+        <maven.compiler.target>10</maven.compiler.target>
+    </properties>
+
+</project>
+
+
+
+<!-- 
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -6,7 +74,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.6.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>webserr</artifactId>
@@ -53,7 +121,6 @@
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
-			<!--Spark java.lang.NoClassDefFoundError: org/codehaus/janino/InternalCompilerException-->
 			<dependency>
 				<groupId>org.codehaus.janino</groupId>
 				<artifactId>commons-compiler</artifactId>
@@ -87,49 +154,7 @@
 
 </project>
 
-<!-- 
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-	
-	 <parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.4</version>
-		<relativePath/> 
-	</parent> 
-	
-    <groupId>com.friends</groupId>
-	<artifactId>wuzzuf_jobs_analysis</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>wuzzuf_jobs_analysis</name>
-	<description>Project to analyse wuzzuf jobs</description>
-	
-<dependencies>
-
-    <dependency>
-        <groupId>org.apache.spark</groupId>
-        <artifactId>spark-core_2.11</artifactId>
-        <version>2.1.0</version>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.spark</groupId>
-        <artifactId>spark-mllib_2.11</artifactId>
-        <version>2.1.0</version>
-    </dependency>
-</dependencies>
-    <properties>
-    	<java.version>11</java.version>
-        <maven.compiler.source>10</maven.compiler.source>
-        <maven.compiler.target>10</maven.compiler.target>
-    </properties>
-
-</project>
--->
-
-<!-- 
+ 
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
