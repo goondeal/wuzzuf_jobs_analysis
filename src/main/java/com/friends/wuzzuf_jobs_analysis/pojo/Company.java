@@ -1,40 +1,35 @@
 package com.friends.wuzzuf_jobs_analysis.pojo;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class Company {
 	
 	private String name;
-	private String city;
+	private String country;
 	private String location;
 	
-	public Company(String name, String city, String location) {
+	public Company(String name, String country, String location) {
 		this.name = name;
-		this.city = city;
+		this.country = country;
 		this.location = location;
 	}
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
+	
+	public String getCountry() {
+		return country;
 	}
-	public String getCity() {
-		return city;
-	}
-	public void setCity(String city) {
-		this.city = city;
-	}
+	
 	public String getLocation() {
 		return location;
-	}
-	public void setLocation(String location) {
-		this.location = location;
 	}
 	
 	@Override
 	public String toString() {
-		return "Company [name=" + name + ", city=" + city + ", location=" + location + "]";
+		return "Company [name=" + name + ", country=" + country + ", location=" + location + "]";
 	}
 	
 	@Override
@@ -53,5 +48,15 @@ public class Company {
 		Company other = (Company) obj;
 		return Objects.equals(name, other.name);
 	}
+	
+	public Map<String, Object> toJSON() {
+		Map<String, Object> result = new HashMap<>();
+		result.put("name", getName());
+		result.put("country", getCountry());
+		result.put("location", getLocation());
+		return result;
+	}
+	
+	
 	
 }
